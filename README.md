@@ -2,6 +2,14 @@
 # microtlv
 Plain C library for parsing and formatting TLV frames.
 
+## Specification
+- No dynamic memory allocation
+- Full static operation
+- RFC7252 compatible
+- Optimised dynamic header length
+- Support 0-2 bytes long types
+- Support 0-2 bytes long length values
+
 
 ## Format
 Format is 100% compatible with RFC7252 Coap Options.
