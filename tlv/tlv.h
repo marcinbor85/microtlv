@@ -40,7 +40,30 @@ extern "C" {
 #define TLV_HEADER_VALUE_1                      0x0D
 #define TLV_HEADER_VALUE_2                      0x0E
 
+/**
+ * @brief Parse input buffer data for search TLV-encoded records.
+ * 
+ * @param data - pointer to input/output buffer pointer (this pointer will be changed during parsing)
+ * @param data_length - pointer to input/output data length (should indicate how many bytes left in the buffer)
+ * @param type - pointer to record type which will be found
+ * @param length - pointer to record value length which will be found
+ * @param value - pointer to record value pointer (pointer will be updated without copy data)
+ * 
+ * @return integer value result, see TLV_RESULT_ macros
+ */
 int tlv_parse(uint8_t **data, uint32_t *data_length, uint32_t *type, uint32_t *length, uint8_t **value);
+
+/**
+ * @brief Format output buffer data with TLV-encoded records.
+ * 
+ * @param data - pointer to input/output buffer pointer (this pointer will be changed during parsing)
+ * @param data_length - pointer to input/output data length (should indicate how many bytes left in the buffer)
+ * @param type - record type to encode
+ * @param length - record value length to encode
+ * @param value - pointer to record value data to encode
+ * 
+ * @return integer value result, see TLV_RESULT_ macros
+ */
 int tlv_format(uint8_t **data, uint32_t *data_length, uint32_t type, uint32_t length, uint8_t *value);
 
 #ifdef __cplusplus
