@@ -60,3 +60,20 @@ cd build
 make
 make test
 ```
+
+## Example tools
+
+Format command line arguments to TLV format:
+```
+./format 1 John 2 Smith 100 "Very Long Text" | xxd
+00000000: 414a 6f68 6e52 536d 6974 68dd 5701 5665  AJohnRSmith.W.Ve
+00000010: 7279 204c 6f6e 6720 5465 7874            ry Long Text
+```
+
+Parse input TLV encoded stream:
+```
+./format 1 John 2 Smith 100 "Very Long Text" | ./bin/parse
+00001: "John"
+00002: "Smith"
+00100: "Very Long Text"
+```
