@@ -58,8 +58,7 @@ int main(int argc, char *argv[])
                 uint32_t length = strlen((char *)value);
 
                 int res = tlv_format(&output, &free_space, type, length, value);
-                if (res != TLV_RESULT_SUCCESS)
-                {
+                if (res != TLV_RESULT_SUCCESS) {
                         printf("error: %d\n", res);
                         exit_code = -1;
                         goto _main_end;
