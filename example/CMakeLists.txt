@@ -9,3 +9,4 @@ target_compile_definitions(
 )
 
 add_subdirectory( ${CMAKE_CURRENT_SOURCE_DIR}/format )
+add_subdirectory( ${CMAKE_CURRENT_SOURCE_DIR}/parse )
