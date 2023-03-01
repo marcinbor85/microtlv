@@ -115,7 +115,7 @@ Output:
 
 Parse input TLV encoded stream:
 ```sh
-./bin/format 1 John 2 Smith 100 "Very Long Text" | ./bin/parse
+echo 414a6f686e52536d697468dd570156657279204c6f6e672054657874 | xxd -r -p | ./bin/parse
 ```
 Output:
 ```
