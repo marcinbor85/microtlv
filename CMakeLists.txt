@@ -14,3 +14,4 @@ set (CMAKE_EXE_LINKER_FLAGS "--coverage" )
 
 add_subdirectory( ${PROJECT_SOURCE_DIR}/tlv )
 add_subdirectory( ${PROJECT_SOURCE_DIR}/tests )
+add_subdirectory( ${PROJECT_SOURCE_DIR}/example )
