@@ -1,10 +1,5 @@
 set( EXAMPLE_TARGET format )
 
-target_compile_definitions(
-    ${TLV_TARGET}
-    PUBLIC
-)
-
 add_executable(
     ${EXAMPLE_TARGET}
     ${CMAKE_CURRENT_SOURCE_DIR}/main.c
