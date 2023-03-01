@@ -105,7 +105,7 @@ int tlv_format(uint8_t **data, uint32_t *data_length, uint32_t type, uint32_t le
 
 Format command line arguments to TLV format:
 ```sh
-./format 1 John 2 Smith 100 "Very Long Text" | xxd
+./bin/format 1 John 2 Smith 100 "Very Long Text" | xxd
 ```
 Output:
 ```
@@ -115,7 +115,7 @@ Output:
 
 Parse input TLV encoded stream:
 ```sh
-./format 1 John 2 Smith 100 "Very Long Text" | ./bin/parse
+./bin/format 1 John 2 Smith 100 "Very Long Text" | ./bin/parse
 ```
 Output:
 ```
