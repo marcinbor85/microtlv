@@ -1,3 +1,4 @@
+![unit-tests](https://github.com/marcinbor85/microtlv/actions/workflows/unit-tests.yml/badge.svg)
 # microtlv
 Plain C library for parsing and formatting TLV frames.
 
