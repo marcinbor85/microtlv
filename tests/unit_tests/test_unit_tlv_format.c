@@ -56,7 +56,7 @@ void name(void)\
 #define _A(...) __VA_ARGS__
 
 DEFINE_TEST_CASE(test_tlv_format_positive_length_0,     _A({0x00}),                                 TLV_RESULT_SUCCESS, 66000, 0,     0, _A({0}))
-DEFINE_TEST_CASE(test_tlv_format_positive_length_1,     _A({0x10, 0xAB}),                           TLV_RESULT_SUCCESS, 66000, 0,     1, _A({0xAA}))
+DEFINE_TEST_CASE(test_tlv_format_positive_length_1,     _A({0x10, 0xAA}),                           TLV_RESULT_SUCCESS, 66000, 0,     1, _A({0xAA}))
 DEFINE_TEST_CASE(test_tlv_format_positive_length_12,    _A({0xC0, TEST_PAYLOAD_12}),                TLV_RESULT_SUCCESS, 66000, 0,    12, _A({TEST_PAYLOAD_12}))
 DEFINE_TEST_CASE(test_tlv_format_positive_length_13,    _A({0xD0, 0x00, TEST_PAYLOAD_13}),          TLV_RESULT_SUCCESS, 66000, 0,    13, _A({TEST_PAYLOAD_13}))
 DEFINE_TEST_CASE(test_tlv_format_positive_length_14,    _A({0xD0, 0x01, TEST_PAYLOAD_14}),          TLV_RESULT_SUCCESS, 66000, 0,    14, _A({TEST_PAYLOAD_14}))
